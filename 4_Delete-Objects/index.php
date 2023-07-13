@@ -1,5 +1,5 @@
 <?php
-    include('includes/person.inc.php')
+    include 'includes/data.inc.php'
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +11,9 @@
 </head>
 <body>
     <?php
-        $person1 = new Person('Daniel', 'Blue', 18);
-        $person1->setName('John');
-        echo $person1->getName();
+        $data = new Data();
+        unset($data);
+        // echo $data->getData();
     ?>
 </body>
 </html>

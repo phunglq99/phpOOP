@@ -1,14 +1,5 @@
 <?php
-    spl_autoload_register('myAutoloader');
-
-
-    function myAutoloader($className) {
-        $path= "classes";
-        $extension = ".classes.php";
-        $fullPath = $path . $className . $extension;
-
-        include_once($fullPath);
-    }
+    include 'includes/autoload.inc.php'
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +15,10 @@
         echo Data::$drinkingAge;
         Data::setDrinkingAge(38);
         echo Data::$drinkingAge;
+
+        $person2 = new Person\Person('John', '12');
+
+        echo $person2->getName();
     ?>
 </body>
 </html>
